@@ -6,7 +6,7 @@ package lhq.lhqstudy.arithmetic.ex104;
  * @date 2023/8/18 00:22
  */
 public class Solution {
-    public int maxDepth(TreeNode root) {
+/*    public int maxDepth(TreeNode root) {
         if(root == null){
             return 0;
         }
@@ -17,7 +17,7 @@ public class Solution {
         }else {
             return right + 1;
         }
-    }
+    }*/
     public class TreeNode {
         int val;
         TreeNode left;
@@ -35,5 +35,12 @@ public class Solution {
             this.left = left;
             this.right = right;
         }
+    }
+
+    public int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 }

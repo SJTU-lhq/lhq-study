@@ -6,7 +6,7 @@ package lhq.lhqstudy.arithmetic.ex21;
  * @date 2023/8/17 16:43
  */
 public class Solution {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+/*    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if(list1 == null){
             return list2;
         }
@@ -31,7 +31,7 @@ public class Solution {
             tmpNode.next = list2;
         }
         return prev.next;
-    }
+    }*/
 
     public class ListNode {
         int val;
@@ -48,5 +48,26 @@ public class Solution {
             this.val = val;
             this.next = next;
         }
+    }
+    ListNode prev = new ListNode();
+    ListNode tmp = prev;
+
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if(list1 == null){
+            return tmp.next = list2;
+        }
+        if(list2 == null){
+            return tmp.next = list1;
+        }
+        if(list1.val < list2.val){
+            tmp.next = list1;
+            tmp = tmp.next;
+            mergeTwoLists(list1.next, list2);
+        }else {
+            tmp.next = list2;
+            tmp = tmp.next;
+            mergeTwoLists(list1, list2.next);
+        }
+        return prev.next;
     }
 }
