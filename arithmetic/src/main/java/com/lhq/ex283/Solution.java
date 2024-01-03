@@ -1,4 +1,4 @@
-package lhq.lhqstudy.arithmetic.ex283;
+package com.lhq.ex283;
 
 /**
  * 星光荡开宇宙，本人闪耀其中
