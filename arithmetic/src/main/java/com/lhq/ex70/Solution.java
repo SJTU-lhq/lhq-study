@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @date 2023/8/19 00:01
  */
 public class Solution {
-    public int climbStairs(int n) {
+/*    public int climbStairs(int n) {
         if(n == 0){
             return 0;
         }
@@ -35,5 +35,18 @@ public class Solution {
                 
             }
         }
+    }*/
+    public int climbStairs(int n) {
+        if(n <= 2){
+            return n;
+        }
+        int a=1,b=2;
+        int c=a+b;
+        for (int i = 2; i < n; i++) {
+            c = a+b;
+            a=b;
+            b=c;
+        }
+        return c;
     }
 }
