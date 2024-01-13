@@ -1,21 +1,19 @@
-package com.lhq.tree;
-
+package com.lhq.leet.ex226;
 
 /**
- * @author lihaiquan
+ * @author lihaiquan (lihq@rd.netease.com)
  * @description:
- * @date 2023/12/13 20:59
+ * @date 2023/8/18 00:35
  */
-public class TreeDemo {
-    public static void main(String[] args) {
-
-    }
-    void traverse(TreeNode root){
-        //前序
-        traverse(root.left);
-        //中序
-        traverse(root.right);
-        //后序
+public class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null){
+            return null;
+        }
+        TreeNode tmp = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(tmp);
+        return root;
     }
 
     public class TreeNode {

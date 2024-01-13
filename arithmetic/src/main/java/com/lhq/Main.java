@@ -1,8 +1,8 @@
 package com.lhq;
 
 /**
- * @author lihaiquan (lihq@rd.netease.com)
- * @description: ${description}
+ * @author lihaiquan
+ * @description:
  * @date 2024/1/3 22:37
  */
 public class Main {

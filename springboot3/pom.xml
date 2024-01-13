@@ -40,6 +40,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--        可观测性场景启动器，线上指标监控、运行状态监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
